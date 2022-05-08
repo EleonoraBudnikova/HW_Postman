@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://162.55.220.72:5005/get_method?name=John&age=37",
+					"raw": "http://162.55.220.72:5005/get_method?name=Sophia&age=22",
 					"protocol": "http",
 					"host": [
 						"162",
@@ -26,16 +26,19 @@
 					"query": [
 						{
 							"key": "name",
-							"value": "John"
+							"value": "Sophia"
 						},
 						{
 							"key": "age",
-							"value": "37"
+							"value": "22"
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				"Sophia",
+				"22"
+			]
 		},
 		{
 			"name": "EP_2",
@@ -47,17 +50,17 @@
 					"formdata": [
 						{
 							"key": "name",
-							"value": "Sophia",
+							"value": "John",
 							"type": "text"
 						},
 						{
 							"key": "age",
-							"value": "28",
+							"value": "42",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "2200",
+							"value": "3000",
 							"type": "text"
 						}
 					]
@@ -77,36 +80,30 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"age": "42",
+				"family": {
+					"children": [
+						[
+							"Alex",
+							24
+						],
+						[
+							"Kate",
+							12
+						]
+					],
+					"u_salary_1_5_year": 12000
+				},
+				"name": "John",
+				"salary": 3000
+			}
 		},
 		{
 			"name": "EP_3",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "Sophia",
-							"type": "text"
-						},
-						{
-							"key": "age",
-							"value": "28",
-							"type": "text"
-						},
-						{
-							"key": "salary",
-							"value": "2200",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
 					"raw": "http://162.55.220.72:5005/object_info_1?name=Alina&age=29&weight=62",
 					"protocol": "http",
@@ -136,36 +133,18 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"age": 29,
+				"daily_food": 0.744,
+				"daily_sleep": 155.0,
+				"name": "Alina"
+			}
 		},
 		{
 			"name": "EP_4",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "Sophia",
-							"type": "text"
-						},
-						{
-							"key": "age",
-							"value": "28",
-							"type": "text"
-						},
-						{
-							"key": "salary",
-							"value": "2200",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
 					"raw": "http://162.55.220.72:5005/object_info_2?name=Artyom&age=33&salary=2549",
 					"protocol": "http",
@@ -195,36 +174,28 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"person": {
+					"u_age": 33,
+					"u_name": [
+						"Artyom",
+						2549,
+						33
+					],
+					"u_salary_5_years": 10705.800000000001
+				},
+				"qa_salary_after_1.5_year": 8411.699999999999,
+				"qa_salary_after_12_months": 6882.3,
+				"qa_salary_after_3.5_years": 9686.199999999999,
+				"qa_salary_after_6_months": 5098,
+				"start_qa_salary": 2549
+			}
 		},
 		{
 			"name": "EP_5",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "Sophia",
-							"type": "text"
-						},
-						{
-							"key": "age",
-							"value": "28",
-							"type": "text"
-						},
-						{
-							"key": "salary",
-							"value": "2200",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
 					"raw": "http://162.55.220.72:5005/object_info_3?name=Uma&age=33&salary=1500",
 					"protocol": "http",
@@ -254,36 +225,40 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"age": "33",
+				"family": {
+					"children": [
+						[
+							"Alex",
+							24
+						],
+						[
+							"Kate",
+							12
+						]
+					],
+					"pets": {
+						"cat": {
+							"age": 3,
+							"name": "Sunny"
+						},
+						"dog": {
+							"age": 4,
+							"name": "Luky"
+						}
+					},
+					"u_salary_1_5_year": 6000
+				},
+				"name": "Uma",
+				"salary": 1500
+			}
 		},
 		{
 			"name": "EP_6",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "Sophia",
-							"type": "text"
-						},
-						{
-							"key": "age",
-							"value": "28",
-							"type": "text"
-						},
-						{
-							"key": "salary",
-							"value": "2200",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
 					"raw": "http://162.55.220.72:5005/object_info_4?name=Samantha&age=26&salary=2500",
 					"protocol": "http",
@@ -313,7 +288,15 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"age": 26,
+				"name": "Samantha",
+				"salary": [
+					2500,
+					"5000",
+					"7500"
+				]
+			}
 		},
 		{
 			"name": "EP_7",
@@ -330,12 +313,12 @@
 						},
 						{
 							"key": "age",
-							"value": "28",
+							"value": "45",
 							"type": "text"
 						},
 						{
 							"key": "salary",
-							"value": "2200",
+							"value": "5600",
 							"type": "text"
 						}
 					]
@@ -355,7 +338,22 @@
 					]
 				}
 			},
-			"response": []
+			"response": {
+				"person": {
+					"u_age": 45,
+					"u_name": [
+						"Boris",
+						5600,
+						45
+					],
+					"u_salary_5_years": 23520.0
+				},
+				"qa_salary_after_1.5_year": 18480.0,
+				"qa_salary_after_12_months": 15120.000000000002,
+				"qa_salary_after_3.5_years": 21280.0,
+				"qa_salary_after_6_months": 11200,
+				"start_qa_salary": 5600
+			}
 		}
 	]
 }
